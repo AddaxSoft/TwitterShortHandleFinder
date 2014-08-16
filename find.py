@@ -48,6 +48,7 @@ while ( l[0] != '_' or l[1] != '_' or l[2] != '_' or l[3] != '_' ):
     index = 0
     
 # print (''.join(l))
+user = ''.join(l)
 if ( getServerResponsForUser(user) == "404" ):
         print(" >>> " + user)
 
