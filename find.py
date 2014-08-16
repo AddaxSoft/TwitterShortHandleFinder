@@ -16,7 +16,7 @@ def getServerResponsForUser(usr):
         return None
 
 
-def lastCase (lst)
+def lastCase (lst):
     for i in xrange(0, len(lst)):
         if ( lst[i] != '_' ):
             return False
