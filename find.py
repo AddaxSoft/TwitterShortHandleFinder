@@ -16,11 +16,18 @@ def getServerResponsForUser(usr):
         return None
 
 
+def lastCase (lst)
+    for i in xrange(0, len(lst)):
+        if ( lst[i] != '_' ):
+            return False
+    return True
+    
+    
 l = [''] * 4
 l[0] = '0'
 index = 0
 
-while ( l[0] != '_' or l[1] != '_' or l[2] != '_' or l[3] != '_' ):
+while ( not lastCase(l) ):
     
     if ( ord(l[index]) > ord('_') ):
         l[index] = '0'
