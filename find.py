@@ -1,7 +1,6 @@
 #!/bin/python
 
-import httplib
-import time
+import http.client
 
 def getServerResponsForUser(usr):
     # Clear-text HTTP is no longer supported - you must use HTTPS
@@ -9,7 +8,7 @@ def getServerResponsForUser(usr):
     
     # Twitter replies with HTTP status 404 if user does not exis
     try:
-        conn = httplib.HTTPSConnection("twitter.com")
+        conn = http.client.HTTPSConnection("twitter.com")
         conn.request("HEAD", usr)
         return conn.getresponse().status
     except StandardError:
@@ -17,7 +16,7 @@ def getServerResponsForUser(usr):
 
 
 def lastCase (lst):
-    for i in xrange(0, len(lst)):
+    for i in range(0, len(lst)):
         if ( lst[i] != '_' ):
             return False
     return True
@@ -40,7 +39,7 @@ while ( not lastCase(l) ):
     
     
 
-    # print(''.join(l))
+    #print(''.join(l))
     user = ''.join(l)
     if ( getServerResponsForUser(user) == "404" ):
         print(" >>> " + user)
