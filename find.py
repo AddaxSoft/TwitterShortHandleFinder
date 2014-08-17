@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/env python
 
 import http.client
 import time
@@ -17,9 +17,9 @@ def getServerResponsForUser(usr):
         time.sleep(5) #Sleeps for 2 secs
         getServerResponsForUser(usr)
         ################################################################
-	# in future versions this should cache current results and quit#
-	# then resume later after user relaunch                        #
-	################################################################
+        # in future versions this should cache current results and quit#
+        # then resume later after user relaunch                        #
+        ################################################################
         return None
 
 
