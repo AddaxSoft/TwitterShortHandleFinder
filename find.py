@@ -1,6 +1,7 @@
 #!/bin/python
 
 import http.client
+import time
 
 def getServerResponsForUser(usr):
     # Clear-text HTTP is no longer supported - you must use HTTPS
@@ -11,7 +12,14 @@ def getServerResponsForUser(usr):
         conn = http.client.HTTPSConnection("twitter.com")
         conn.request("HEAD", usr)
         return conn.getresponse().status
-    except StandardError:
+    except BaseException:
+        print("Network/Twitter Blockage Error .. Zzzing for sometime and retrying again")
+        time.sleep(5) #Sleeps for 2 secs
+        getServerResponsForUser(usr)
+        ################################################################
+	# in future versions this should cache current results and quit#
+	# then resume later after user relaunch                        #
+	################################################################
         return None
 
 
