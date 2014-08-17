@@ -1,7 +1,11 @@
 Twitter ShortHandle Finder
 ==========================
 
-It finds 'short' and available Twitter handles (usernames) to register with
+![Twitter](https://sslimgs.xkcd.com/comics/twitter.png)
+
+This tool silently brute-forces Twitter for *short* un-used accounts (aka:
+Twitter Handles) so you can register or switch to it, at the end, in Twitter:
+The sorter, the better..
 
 Todo
 ====
