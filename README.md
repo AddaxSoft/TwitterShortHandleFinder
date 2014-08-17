@@ -5,9 +5,12 @@ It finds 'short' and available Twitter handles (usernames) to register with
 
 Todo
 ====
- 1. Add caching features
- 2. Add flexibitliy in handle's length (some people may concider >4 chars as 'short'
-
+ - [ ] Add caching features
+ - [x] Custom loop-ending function so size can be modifed easily
+ - [ ] Add user defined string length
+ - [ ] Add proxy options though http.client
+  - [ ] Add Tor option
+ - [ ] Add to write to file option
 Warnings
 ========
 This tool probably voilates Twitter's TOS, and it does not use Twitter APIs to find handles.
