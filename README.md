@@ -11,6 +11,7 @@ Todo
  - [ ] Add proxy options though http.client
   - [ ] Add Tor option
  - [ ] Add to write to file option
+
 Warnings
 ========
 This tool probably voilates Twitter's TOS, and it does not use Twitter APIs to find handles.
